@@ -23,7 +23,11 @@ interface props {
   handlePrevious: () => void;
 }
 
-export default function MediaControlCard({ song, handleNext, handlePrevious }: props) {
+export default function MediaControlCard({
+  song,
+  handleNext,
+  handlePrevious,
+}: props) {
   const audioRef: any = useRef<HTMLAudioElement>();
 
   const [music, setMusic] = useState<MusicModel>(initialMusicModel);
@@ -33,24 +37,23 @@ export default function MediaControlCard({ song, handleNext, handlePrevious }: p
     musicHandler.handlePlayPause(audioRef);
   };
   const handleSliderChange = (
-    event: Event,
-    value: number | number[],
-    activeThumb: number
+    event: Event | React.SyntheticEvent<Element, Event>,
+    value: number | number[]
   ) => {
-    musicHandler.handleSliderChange(event, value, activeThumb);
+    musicHandler.handleSliderChange(event, value);
   };
-  const handleTimeUpdate:any = () => {
+  const handleTimeUpdate: any = () => {
     musicHandler.handleTimeUpdate();
   };
 
   const handleNextCard = () => {
-    handleNext()
+    handleNext();
     setMusic(initialMusicModel);
-  }
+  };
   const handlePreviousCard = () => {
-    handlePrevious()
+    handlePrevious();
     setMusic(initialMusicModel);
-  }
+  };
 
   return (
     <Card
@@ -91,14 +94,14 @@ export default function MediaControlCard({ song, handleNext, handlePrevious }: p
         <Container>
           <TimeSlider
             onChange={handleSliderChange}
-            currentTime ={music.currentTime}
+            currentTime={music.currentTime}
             duration={song.duration}
           />
         </Container>
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 150 , display:{xs:"none",md:"block"}}}
+        sx={{ width: 150, display: { xs: "none", md: "block" } }}
         image={song.image.src}
         alt={song.image.alt}
       />

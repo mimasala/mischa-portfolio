@@ -33,9 +33,8 @@ const MusicHandler = (
     setMusic({ ...music, isPlaying: !music.isPlaying });
   },
   handleSliderChange: (
-    event: Event,
-    value: number | number[],
-    activeThumb: number
+    event: Event | React.SyntheticEvent<Element, Event>,
+    value: number | number[]
   ) => {
     const audio = audioRef.current;
     audio.currentTime = value;
