@@ -9,14 +9,13 @@ import MailIcon from "@mui/icons-material/Mail";
 import Toolbar from "@mui/material/Toolbar";
 import { Box, Typography, useTheme } from "@mui/material";
 import ThemeUpdater from "../ThemeUpdater";
-import NavDrawerCollapse from "./NavDrawerCollapse";
 
 const NavDrawer = () => {
   const theme = useTheme();
   return (
     <>
       <Toolbar>
-        <Typography variant="h6">Max Muster</Typography>
+        <Typography variant="h6">Mischa Strauss</Typography>
       </Toolbar>
       <Box
         sx={{
