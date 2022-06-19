@@ -5,9 +5,10 @@ interface props {
   onChange: ((event: Event | React.SyntheticEvent<Element, Event>, value: number | number[]) => void) | undefined
   currentTime: number | number[];
   duration:number;
+  handleSliderUpdate: (event: Event | React.SyntheticEvent<Element, Event>, value: number | number[]) => void;
 }
 
-const TimeSlider = ({onChange, currentTime, duration}:props) => {
+const TimeSlider = ({onChange, currentTime, duration, handleSliderUpdate}:props) => {
 
   return (
     <div>
@@ -19,6 +20,7 @@ const TimeSlider = ({onChange, currentTime, duration}:props) => {
         value={currentTime}
         max={duration}
         onChangeCommitted={onChange}
+        onChange={handleSliderUpdate}
       />
     </div>
   );

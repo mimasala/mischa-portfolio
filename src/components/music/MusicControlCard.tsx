@@ -42,9 +42,6 @@ export default function MediaControlCard({
   ) => {
     musicHandler.handleSliderChange(event, value);
   };
-  const handleTimeUpdate: any = () => {
-    musicHandler.handleTimeUpdate();
-  };
 
   const handleNextCard = () => {
     handleNext();
@@ -53,6 +50,12 @@ export default function MediaControlCard({
   const handlePreviousCard = () => {
     handlePrevious();
     setMusic(initialMusicModel);
+  };
+  const handleSliderUpdate = (
+    event: Event | React.SyntheticEvent<Element, Event>,
+    value: number | number[]
+  ) => {
+    musicHandler.handleSliderUpdate(event, value);
   };
 
   return (
@@ -70,7 +73,6 @@ export default function MediaControlCard({
               duration: +e.currentTarget.duration.toFixed(2),
             });
           }}
-          onTimeUpdate={handleTimeUpdate}
           onEnded={() => setMusic({ ...music, isPlaying: false })}
         />
         <CardContent sx={{ flex: "1 0 auto" }}>
@@ -96,6 +98,7 @@ export default function MediaControlCard({
             onChange={handleSliderChange}
             currentTime={music.currentTime}
             duration={song.duration}
+            handleSliderUpdate={handleSliderUpdate}
           />
         </Container>
       </Box>

@@ -38,14 +38,18 @@ const MusicHandler = (
   ) => {
     const audio = audioRef.current;
     audio.currentTime = value;
+  },
+  handleSliderUpdate: (
+    event: Event | React.SyntheticEvent<Element, Event>,
+    value: number | number[]
+  ) => {
     setMusic({ ...music, currentTime: value });
   },
   handlePrevious: () => {},
   handleNext: () => {},
   handleTimeUpdate: () => {
     const audio = audioRef.current;
-    setMusic({ ...music, currentTime: audio.currentTime });
-  }
+  },
 });
 
 export default MusicHandler;
