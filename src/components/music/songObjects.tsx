@@ -1,5 +1,5 @@
-import test from "../../../public/audios/bruhtest.mp3";
-import LampGodSong from "../../../public/audios/LampGodSong.mp3";
+// import test from "../audios/bruhtest.mp3";
+// import LampGodSong from "../audios/LampGodSong.mp3";
 
 export interface songObject {
   id: number;
@@ -15,7 +15,7 @@ export const songs: songObject[] = [
     id: 1,
     title: "空想夜間飛行",
     artist: "Lamp",
-    src: LampGodSong,
+    src: "../audios/LampGodSong.mp3",
     duration: 264,
     image: {
       src: "../images/songs/lampBARABARABA.webp",
@@ -26,7 +26,7 @@ export const songs: songObject[] = [
     id: 1,
     title: "only test",
     artist: "none",
-    src: test,
+    src: "../audios/bruhtest.mp3",
     duration: 26,
     image: {
       src: "../images/songs/Lamp_Yume_Utsutsu.jpg",
