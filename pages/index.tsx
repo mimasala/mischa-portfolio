@@ -9,13 +9,15 @@ import TitleScreen from "../src/components/TitleScreen";
 import Masonry from "@mui/lab/Masonry";
 import MediaControlCard from "../src/components/music/MusicControlCard";
 import { NextPage } from "next";
+import { songs } from "../src/components/music/songObjects";
+import SongsList from "../src/components/music/SongsList";
 
 const Home: NextPage = () => {
   return (
     <>
       <DefaultLayout>
       <MainContentContainer>
-          <MediaControlCard/>
+          <SongsList songs={songs}/>
       </MainContentContainer>
       </DefaultLayout>
     </>

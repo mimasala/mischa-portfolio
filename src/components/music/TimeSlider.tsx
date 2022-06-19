@@ -3,11 +3,11 @@ import React, { useEffect } from "react";
 
 interface props {
   onChange: ((event: Event, value: number | number[], activeThumb: number) => void) | undefined
-  percentage: number | number[];
+  currentTime: number | number[];
   duration:number;
 }
 
-const TimeSlider = ({onChange, percentage, duration}:props) => {
+const TimeSlider = ({onChange, currentTime, duration}:props) => {
 
   return (
     <div>
@@ -17,7 +17,7 @@ const TimeSlider = ({onChange, percentage, duration}:props) => {
         color="primary"
         onChange={onChange}
         step={0.01}
-        value={percentage}
+        value={currentTime}
         max={duration}
       />
     </div>

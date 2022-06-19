@@ -39,13 +39,13 @@ const MusicHandler = (
   ) => {
     const audio = audioRef.current;
     audio.currentTime = value;
-    setMusic({ ...music, percentage: value });
+    setMusic({ ...music, currentTime: value });
   },
   handlePrevious: () => {},
   handleNext: () => {},
   handleTimeUpdate: () => {
     const audio = audioRef.current;
-    setMusic({ ...music, percentage: audio.currentTime });
+    setMusic({ ...music, currentTime: audio.currentTime });
   }
 });
 

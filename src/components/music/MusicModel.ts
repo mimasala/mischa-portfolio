@@ -1,8 +1,7 @@
 export default interface MusicModel {
-    percentage: number | number[];
+    currentTime: number | number[];
     isPlaying: boolean;
     duration: number;
-    currentTime: number;
 }
 
 // export const themeKeys: { [key: string]: Theme } = {
@@ -13,8 +12,7 @@ export default interface MusicModel {
 //   };
 
 export const initialMusicModel: MusicModel = {
-    percentage: 0,
+    currentTime: 0,
     isPlaying: false,
     duration: 0,
-    currentTime: 0,
 }
