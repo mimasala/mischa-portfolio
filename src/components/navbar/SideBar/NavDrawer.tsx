@@ -8,7 +8,7 @@ import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import Toolbar from "@mui/material/Toolbar";
 import { Box, Typography, useTheme } from "@mui/material";
-import ThemeUpdater from "../ThemeUpdater";
+import ThemeUpdater from "../../ThemeUpdater";
 
 const NavDrawer = () => {
   const theme = useTheme();

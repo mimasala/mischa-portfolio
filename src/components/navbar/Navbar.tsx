@@ -22,8 +22,8 @@ import NavUpper from "./NavUpper";
 import AbcIcon from "@mui/icons-material/Abc";
 import CloseIcon from "@mui/icons-material/Close";
 import { TransitionGroup } from "react-transition-group";
-import NavDrawer from "./NavDrawer";
-import ResponsiveNavDrawer from "./ResponsiveNavDrawer";
+import NavDrawer from "./SideBar/NavDrawer";
+import ResponsiveNavDrawer from "./SideBar/ResponsiveNavDrawer";
 
 const drawerWidth = 240;
 
