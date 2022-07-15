@@ -72,7 +72,7 @@ const ThemeUpdater: FC<{}> = () => {
   });
 
   return (
-    <div>
+    <>
       <BlurrySmallContainerBox>
         <ThemeRadioButton color="white" {...controlProps("light")}/>
         <ThemeRadioButton color="black" {...controlProps("dark")}/>
@@ -88,7 +88,7 @@ const ThemeUpdater: FC<{}> = () => {
           </Typography>
         </Alert>
       </SnackbarInfo>
-    </div>
+    </>
   );
 };
 

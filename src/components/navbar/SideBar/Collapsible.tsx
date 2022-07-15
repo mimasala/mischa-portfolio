@@ -9,12 +9,10 @@ import {
 } from "@mui/material";
 import React from "react";
 import { CollapseObject } from "./CollapseService";
+import { module } from "./CollapseService";
 
-interface props {
-  content: CollapseObject;
-}
 
-const Collapsible = ({ content }: props) => {
+const Collapsible = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -23,23 +21,27 @@ const Collapsible = ({ content }: props) => {
 
   return (
     <>
-      <ListItemButton onClick={handleClick}>
-        <ListItemIcon></ListItemIcon>
-        <ListItemText primary="Inbox" />
+      {/* <ListItemButton onClick={handleClick}>
+        <ListItemIcon>
+
+        </ListItemIcon>
+        <ListItemText primary={module.displayName} />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        {content.children?.map((child) => {
+      <Collapse in={open} timeout="auto" unmountOnExit> */}
+
+      {/* {module.displayName} */}
+
+        {/* {module.children?.map((child) => {
           return (
             <List key={child.key} component="div" disablePadding>
               <ListItemButton sx={{ pl: 4 }} href={child.route}>
-                <ListItemIcon>{child.icon}</ListItemIcon>
-                <ListItemText primary={child.displayName} />
+                <ListItemText inset primary={child.displayName} />
               </ListItemButton>
             </List>
           )
-        })}
-      </Collapse>
+        })} */}
+      {/* </Collapse> */}
     </>
   );
 };

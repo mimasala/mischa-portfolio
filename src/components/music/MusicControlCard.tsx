@@ -12,10 +12,11 @@ import "../../../public/images/songs/Lamp_Yume_Utsutsu.jpg";
 import TimeSlider from "./TimeSlider";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import MusicModel, { initialMusicModel } from "./MusicModel";
-import { Container } from "@mui/material";
+import { Container, createTheme, Grid, responsiveFontSizes } from "@mui/material";
 import MusicPlayNext from "./MusicPlayNext";
 import { songObject } from "./songObjects";
 import MusicHandler from "./MusicHandler";
+import { ThemeProvider } from "next-themes";
 
 interface props {
   song: songObject;
@@ -59,55 +60,73 @@ export default function MediaControlCard({
   };
 
   return (
-    <Card
-      sx={{ display: "flex", borderRadius: "0.5em", width: "max-content" }}
-      elevation={3}
-    >
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
-        <audio
-          ref={audioRef}
-          src={song.src}
-          onLoadedData={(e) => {
-            setMusic({
-              ...music,
-              duration: +e.currentTarget.duration.toFixed(2),
-            });
-          }}
-          onEnded={() => setMusic({ ...music, isPlaying: false })}
-        />
-        <CardContent sx={{ flex: "1 0 auto" }}>
-          <Typography component="div" variant="h5">
-            {song.title}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="text.secondary"
-            component="div"
-          >
-            {song.artist}
-          </Typography>
-        </CardContent>
-        <MusicPlayNext
-          onPrevious={handlePreviousCard}
-          onNext={handleNextCard}
-          onPlayPause={handlePlayPause}
-          isPlaying={music.isPlaying}
-        />
-        <Container>
-          <TimeSlider
-            onChange={handleSliderChange}
-            currentTime={music.currentTime}
-            duration={song.duration}
-            handleSliderUpdate={handleSliderUpdate}
+    <ThemeProvider>
+      <Card
+        sx={{
+          display: "flex",
+          borderRadius: "0.5em",
+          width: { xs: 170, md: 300 },
+          height: { xs: 180 },
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        elevation={2}
+      >
+        <Grid container sx={{ display: "flex", flexDirection: "column" }}>
+          <audio
+            ref={audioRef}
+            src={song.src}
+            onLoadedData={(e) => {
+              setMusic({
+                ...music,
+                isLoading: false,
+                duration: +e.currentTarget.duration.toFixed(2),
+              });
+            }}
+            onTimeUpdate={(e) => {
+              setMusic({
+                ...music,
+                currentTime: +e.currentTarget.currentTime.toFixed(2),
+              });
+            }}
+            onEnded={() => setMusic({ ...music, isPlaying: false })}
           />
-        </Container>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150, display: { xs: "none", md: "block" } }}
-        image={song.image.src}
-        alt={song.image.alt}
-      />
-    </Card>
+          <CardContent sx={{ flex: "1 0", alignItems:"center", justifyContent:"center" }}>
+
+            <Typography variant="h6" fontWeight={"bold"}>
+              {song.title}
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              color="text.secondary"
+              component="div"
+            >
+              {song.artist}
+            </Typography>
+          </CardContent>
+          <MusicPlayNext
+            onPrevious={handlePreviousCard}
+            onNext={handleNextCard}
+            onPlayPause={handlePlayPause}
+            isPlaying={music.isPlaying}
+            isLoading={music.isLoading}
+          />
+          <Container sx={{justifyContent:"center", display:"flex 1"}}>
+            <TimeSlider
+              onChange={handleSliderChange}
+              currentTime={music.currentTime}
+              duration={song.duration}
+              handleSliderUpdate={handleSliderUpdate}
+            />
+          </Container>
+        </Grid>
+        <CardMedia
+          component="img"
+          sx={{ height: 180, width:130, display: { xs: "none", md: "block" } }}
+          image={song.image.src}
+          alt={song.image.alt}
+        />
+      </Card>
+    </ThemeProvider>
   );
 }

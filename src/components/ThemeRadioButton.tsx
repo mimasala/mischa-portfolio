@@ -7,7 +7,6 @@ interface props {
 }
 
 const ThemeRadioButton = ({color, ...props}:props) => {
-  const theme = useTheme()
   return (
     <>
       <Radio

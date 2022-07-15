@@ -1,4 +1,4 @@
-import { css } from "@mui/material";
+import { Box, CircularProgress, css, Grid, Skeleton } from "@mui/material";
 import Footer from "../src/components/Footer";
 import DefaultLayout from "../src/layouts/DefaultLayout";
 import MainContentContainer from "../src/components/MainContentContainer";
@@ -11,14 +11,22 @@ import MediaControlCard from "../src/components/music/MusicControlCard";
 import { NextPage } from "next";
 import { songs } from "../src/components/music/songObjects";
 import SongsList from "../src/components/music/SongsList";
+import BunnyModel from "../src/components/BunnyModel";
+import { useState } from "react";
+import DefaultIcon from "../public/DefaultIcon";
 
 const Home: NextPage = () => {
   return (
     <>
       <DefaultLayout>
-      <MainContentContainer>
-          <SongsList songs={songs}/>
-      </MainContentContainer>
+        <MainContentContainer>
+          <Grid item>
+            <SongsList songs={songs} />
+          </Grid>
+          <Grid item>
+            <DefaultIcon />
+          </Grid>
+        </MainContentContainer>
       </DefaultLayout>
     </>
   );

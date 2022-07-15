@@ -1,16 +1,17 @@
-import { Box, IconButton } from "@mui/material";
+import { Box, CircularProgress, IconButton } from "@mui/material";
 import React from "react";
 import MusicModel from "./MusicModel";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
-import PauseIcon from '@mui/icons-material/Pause';
+import PauseIcon from "@mui/icons-material/Pause";
 
 interface props {
   onPrevious: () => void;
   onPlayPause: () => void;
   onNext: () => void;
   isPlaying: boolean;
+  isLoading: boolean;
 }
 
 const MusicPlayNext = ({
@@ -18,18 +19,51 @@ const MusicPlayNext = ({
   onNext,
   onPlayPause,
   isPlaying,
+  isLoading,
 }: props) => {
   return (
     <div>
-      <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          pl: 1,
+          pb: 1,
+        }}
+      >
         <IconButton value="previous" onClick={onPrevious}>
           <SkipPreviousIcon color="primary" />
         </IconButton>
-        <IconButton  onClick={onPlayPause}>
+        <IconButton onClick={onPlayPause}>
+          {/* {isLoading ? (
+            <CircularProgress />
+          ) : isPlaying ? (
+            <PauseIcon
+              values="pause"
+              sx={{ height: 38, width: 38 }}
+              color="primary"
+            />
+          ) : (
+            <PlayArrowIcon
+              values="play"
+              sx={{ height: 38, width: 38 }}
+              color="primary"
+            />
+          )} */}
+
           {isPlaying ? (
-              <PauseIcon values="pause" sx={{ height: 38, width: 38 }} color="primary" />
-              ) : (
-              <PlayArrowIcon values="play" sx={{ height: 38, width: 38 }} color="primary" />
+            <PauseIcon
+              values="pause"
+              sx={{ height: 38, width: 38 }}
+              color="primary"
+            />
+          ) : (
+            <PlayArrowIcon
+              values="play"
+              sx={{ height: 38, width: 38 }}
+              color="primary"
+            />
           )}
         </IconButton>
         <IconButton value="next" onClick={onNext}>

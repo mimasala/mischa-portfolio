@@ -14,7 +14,8 @@ export default function Scene() {
           zIndex: -1,
         }}
       >
-        <Spline scene="https://prod.spline.design/PQRx7MTFYmLqC72C/scene.splinecode" />
+        {/* <Spline scene="https://prod.spline.design/PQRx7MTFYmLqC72C/scene.splinecode" /> */}
+        {/* <Spline scene="https://prod.spline.design/VP-BUpeqTPwoXBdA/scene.splinecode" /> */}
       </Box>
     </>
   );

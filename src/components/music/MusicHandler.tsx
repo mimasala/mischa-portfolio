@@ -44,6 +44,7 @@ const MusicHandler = (
     value: number | number[]
   ) => {
     setMusic({ ...music, currentTime: value });
+    console.log(value);
   },
   handlePrevious: () => {},
   handleNext: () => {},
