@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <DefaultLayout>
         <MainContentContainer>
           <Grid item>
-            <SongsList songs={songs} />
+            {/* <SongsList songs={songs} /> */}
           </Grid>
           <Grid item>
             <DefaultIcon />

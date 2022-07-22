@@ -25,6 +25,7 @@ const MainContentContainer = ({ children }: props) => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        overflow: "hidden",
       }}
     >
       <Box sx={{ flexGrow: "1" }}>

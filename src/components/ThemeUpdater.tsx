@@ -73,12 +73,12 @@ const ThemeUpdater: FC<{}> = () => {
 
   return (
     <>
-      <BlurrySmallContainerBox>
+      {/* <BlurrySmallContainerBox> */}
         <ThemeRadioButton color="white" {...controlProps("light")}/>
         <ThemeRadioButton color="black" {...controlProps("dark")}/>
         <ThemeRadioButton color="#f67599" {...controlProps("luna")}/>
         <ThemeRadioButton color="#618c56" {...controlProps("camping")}/>
-      </BlurrySmallContainerBox>
+      {/* </BlurrySmallContainerBox> */}
 
       <SnackbarInfo open={open} handleClose={handleClose}>
         <Alert severity="info">

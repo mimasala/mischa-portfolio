@@ -3,7 +3,7 @@ import { Box } from '@mui/material'
 const Footer = () => {
   return (
     <Box sx={{textAlign:"center", opacity:0.4, fontSize:"sm"}}>
-      &copy; {new Date().getFullYear()} Mischa Strauss. All Rights Reserved.
+      &copy; {new Date().getFullYear()} Made with ❤️ by Mischa Strauss. 
     </Box>
   )
 }
