@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -27,15 +27,22 @@ import {
   Collapse,
   Drawer,
   useTheme,
+  Divider,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ViewOnGithubButton from "../ViewOnGithubButton";
+import SettingsButton from "../settingsBar/SettingsButton";
 interface props {
   drawerWidth: number;
   handleDrawerToggle: () => void;
+  handleSettingsToggle: () => void;
 }
 
-const NavUpper = ({ drawerWidth, handleDrawerToggle }: props) => {
+const NavUpper = ({
+  drawerWidth,
+  handleDrawerToggle,
+  handleSettingsToggle,
+}: props) => {
   return (
     <>
       <AppBar
@@ -57,10 +64,14 @@ const NavUpper = ({ drawerWidth, handleDrawerToggle }: props) => {
               onClick={handleDrawerToggle}
               sx={{ mr: 2, display: { sm: "none" } }}
             >
-              <MenuIcon color="primary"/>
+              <MenuIcon color="primary" />
             </IconButton>
           </Box>
-          <ViewOnGithubButton />
+          <Stack direction={"row"} spacing={1}>
+            <ViewOnGithubButton />
+            <Divider orientation="vertical" flexItem />
+            <SettingsButton handleClick={handleSettingsToggle} />
+          </Stack>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

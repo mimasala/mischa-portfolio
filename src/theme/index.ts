@@ -94,9 +94,22 @@ export const campingTheme = createTheme({
   transitions: defaultTransitionSettings,
 });
 
+export const defaultTheme = createTheme({
+  palette: {
+    mode: "dark",
+    primary: { main: "#e2b714" }, //icon color
+    secondary: { main: "#646669" },
+    background: { default: "#323437", paper: "#323437" },
+    text: { primary: "#d1d0c5", secondary: "#e2b714" },
+  },
+  typography: darkDefaultTypographyPalette,
+  transitions: defaultTransitionSettings,
+});
+
 export const themeKeys: { [key: string]: Theme } = {
   light: lightTheme,
   dark: darkTheme,
   luna: lunaTheme,
   camping: campingTheme,
+  default: defaultTheme,
 };

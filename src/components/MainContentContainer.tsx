@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import Masonry from "@mui/lab/Masonry";
 import Footer from "./Footer";
 import BunnyModel from "./BunnyModel";
+import Main from "./content/Main";
 
 interface props {
   children: React.ReactNode;
@@ -50,7 +51,7 @@ const MainContentContainer = ({ children }: props) => {
           display: "flex",
           backdropFilter: "blur(5px)",
           backgroundColor: alpha("#1f1f1f", 0.5),
-          minHeight: "100vh",
+          // minHeight: "100vh",
           borderRadius: "1em",
           overflow: "hidden",
           position: "relative",
@@ -62,13 +63,13 @@ const MainContentContainer = ({ children }: props) => {
         <Container
           sx={{
             marginTop: "1em",
-            justifyContent: { xs: "center", sm: "flex-start" },
+            justifyContent: { xs: "center" },
             display: "flex",
           }}
         >
-          <Grid container spacing={2}>
-            {children}
-          </Grid>
+          <Box sx={{display:"flex", justifyContent:"center"}}>
+            <Main/>
+          </Box>
         </Container>
       </Box>
       <Footer />

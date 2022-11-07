@@ -20,8 +20,6 @@ const ResponsiveNavDrawer = ({ mobileOpen, handleDrawerToggle }: props) => {
         variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
-        sx={{
-        }}
         ModalProps={{
           keepMounted: true,
         }}

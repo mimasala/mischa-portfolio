@@ -24,16 +24,21 @@ import CloseIcon from "@mui/icons-material/Close";
 import { TransitionGroup } from "react-transition-group";
 import NavDrawer from "./SideBar/NavDrawer";
 import ResponsiveNavDrawer from "./SideBar/ResponsiveNavDrawer";
+import SettingsDrawerContainer from "../settingsBar/SettingsDrawerContainer";
+import SettingsContent from "../settingsBar/SettingsContent";
 
 const drawerWidth = 240;
 
 const Navbar = () => {
-  const [checked, setChecked] = React.useState(true)
-
-  const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [settingsOpen, setSettingsOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleSettingsToggle = () => {
+    setSettingsOpen(!settingsOpen);
   };
 
   return (
@@ -41,16 +46,24 @@ const Navbar = () => {
       <NavUpper
         drawerWidth={drawerWidth}
         handleDrawerToggle={handleDrawerToggle}
+        handleSettingsToggle={handleSettingsToggle}
       />
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        <ResponsiveNavDrawer handleDrawerToggle={handleDrawerToggle} mobileOpen={mobileOpen}/>
+        <ResponsiveNavDrawer
+          handleDrawerToggle={handleDrawerToggle}
+          mobileOpen={mobileOpen}
+        />
+        <SettingsDrawerContainer
+          isOpen={settingsOpen}
+          handleToggleSettings={handleSettingsToggle}
+        />
       </Box>
     </Box>
   );
 };
-// <NavUpper setChecked={() => setChecked(!checked)} />
+
 export default Navbar;
