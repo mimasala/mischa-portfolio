@@ -6,7 +6,7 @@ const ViewOnGithubButton = () => {
   return (
     <div>
       <Tooltip title="view on GitHub">
-        <IconButton>
+        <IconButton href="https://github.com/mimasala/mischa-portfolio">
           <GitHubIcon color="primary"/>
         </IconButton>
       </Tooltip>

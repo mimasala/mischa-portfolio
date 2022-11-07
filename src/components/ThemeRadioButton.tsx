@@ -1,22 +1,28 @@
 import { useTheme } from "@emotion/react";
-import { Radio } from "@mui/material";
+import { FormControlLabel, Radio } from "@mui/material";
 import React from "react";
 
 interface props {
-    color: string;
+  color: string;
+  label?: string | undefined | null;
 }
 
-const ThemeRadioButton = ({color, ...props}:props) => {
+const ThemeRadioButton = ({ color, label, ...props }: props) => {
   return (
     <>
-      <Radio
-        {...props}
-        sx={{
-          color: {color},
-          "&.Mui-checked": {
-            color: {color},
-          },
-        }}
+      <FormControlLabel
+        label={label}
+        control={
+          <Radio
+            {...props}
+            sx={{
+              color: { color },
+              "&.Mui-checked": {
+                color: { color },
+              },
+            }}
+          />
+        }
       />
     </>
   );

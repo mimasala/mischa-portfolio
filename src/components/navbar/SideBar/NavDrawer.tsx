@@ -11,12 +11,10 @@ import { Box, Typography, useTheme } from "@mui/material";
 import ThemeUpdater from "../../ThemeUpdater";
 import Collapsible from "./Collapsible";
 import BunnyModel from "../../BunnyModel";
-// import { module } from "./CollapseService";
 
 const NavDrawer = () => {
-  const theme = useTheme();
   return (
-    <>
+    <Box sx={{ width: 240 }}>
       <Toolbar>
         <Typography variant="h6">Mischa Strauss</Typography>
       </Toolbar>
@@ -37,9 +35,9 @@ const NavDrawer = () => {
           margin: "1em",
         }}
       >
-        <ThemeUpdater />
+        {/* content here */}
       </Box>
-    </>
+    </Box>
   );
 };
 

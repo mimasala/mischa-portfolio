@@ -15,8 +15,6 @@ export default function Scene({ onLoad }: props) {
       >
         <Spline onLoad={()=> {
           onLoad(true)
-          console.log("loaded")
-          
         }} scene="https://prod.spline.design/VP-BUpeqTPwoXBdA/scene.splinecode" />
       </Box>
     </>
