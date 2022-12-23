@@ -1,5 +1,5 @@
-import { Slider, useTheme } from "@mui/material";
-import React, { useEffect } from "react";
+import { Slider } from "@mui/material";
+import React from "react";
 
 interface props {
   onChange: ((event: Event | React.SyntheticEvent<Element, Event>, value: number | number[]) => void) | undefined

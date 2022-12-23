@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MusicControlCard from "./MusicControlCard";
-import MusicModel, { initialMusicModel } from "./MusicModel";
 import { songObject } from "./songObjects";
 
 interface props {

@@ -1,6 +1,4 @@
 import { Box, CircularProgress, IconButton } from "@mui/material";
-import React from "react";
-import MusicModel from "./MusicModel";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";

@@ -1,5 +1,4 @@
 import { Drawer } from "@mui/material";
-import React, { useState } from "react";
 import SettingsContent from "./SettingsContent";
 
 interface props {

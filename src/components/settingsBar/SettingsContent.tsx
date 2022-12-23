@@ -1,7 +1,4 @@
-import { AppBar, Box, Divider, IconButton, Toolbar, Typography } from '@mui/material'
-import React from 'react'
-import CloseIcon from '@mui/icons-material/Close';
-import Collapsible from '../navbar/SideBar/Collapsible';
+import { Box, Divider, Toolbar, Typography } from '@mui/material'
 import ThemeUpdater from '../ThemeUpdater';
 
 const SettingsContent = () => {

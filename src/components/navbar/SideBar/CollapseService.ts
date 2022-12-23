@@ -1,7 +1,3 @@
-import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import { SvgIconTypeMap } from "@mui/material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
 
 export interface CollapseObject {
     displayName: string

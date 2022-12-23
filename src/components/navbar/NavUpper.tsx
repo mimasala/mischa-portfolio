@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import ScrollToTop from "../ScrollToTop";
 import {
@@ -9,7 +8,6 @@ import {
   IconButton,
   Divider,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import ViewOnGithubButton from "../ViewOnGithubButton";
 import SettingsButton from "../settingsBar/SettingsButton";
 interface props {
