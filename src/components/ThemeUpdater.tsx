@@ -1,29 +1,17 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Box,
-  Button,
   css,
-  IconButton,
-  MenuItem,
-  Radio,
-  Select,
   Typography,
-  alpha,
   Alert,
   Link,
   Divider,
   Stack,
-  Paper,
 } from "@mui/material";
 import { useTheme } from "next-themes";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { pink } from "@mui/material/colors";
 import BlurrySmallContainerBox from "./BlurrySmallContainerBox";
 import SnackbarInfo from "./SnackbarInfo";
 import ThemeRadioButton from "./ThemeRadioButton";
-import RadioButtonBox from "./RadioButtonBox";
-import CustomThemeContainer from "./customTheme/CustomThemeContainer";
 
 const ThemeUpdater = () => {
   const { theme, resolvedTheme, setTheme } = useTheme();

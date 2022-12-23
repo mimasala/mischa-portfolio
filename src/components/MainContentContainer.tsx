@@ -2,12 +2,9 @@ import {
   Box,
   Container,
   alpha,
-  Paper,
-  Grid,
   CircularProgress,
 } from "@mui/material";
 import React, { useState } from "react";
-import Masonry from "@mui/lab/Masonry";
 import Footer from "./Footer";
 import BunnyModel from "./BunnyModel";
 import Main from "./content/Main";

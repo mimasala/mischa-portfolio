@@ -1,5 +1,4 @@
 import { IconButton, Tooltip } from "@mui/material";
-import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const ViewOnGithubButton = () => {

@@ -1,4 +1,3 @@
-import Spline from "@splinetool/react-spline";
 import { Box } from "@mui/material";
 
 export default function Scene() {
