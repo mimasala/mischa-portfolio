@@ -59,7 +59,9 @@ export default function MediaControlCard({
         sx={{
           display: "flex",
           borderRadius: "0.5em",
-          width: { xs: 170, md: 300 },
+          width: { 
+            // xs: 170, 
+            md: 300 },
           height: { xs: 180 },
           justifyContent: "center",
           alignItems: "center",
@@ -116,7 +118,9 @@ export default function MediaControlCard({
         </Grid>
         <CardMedia
           component="img"
-          sx={{ height: 180, width:130, display: { xs: "none", md: "block" } }}
+          sx={{ height: 180, width:130, display: { 
+            // xs: "none",
+            md: "block" }}}
           image={song.image.src}
           alt={song.image.alt}
         />
