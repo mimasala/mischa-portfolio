@@ -62,7 +62,7 @@ export default function MediaControlCard({
           width: { 
             // xs: 170, 
             md: 300 },
-          height: { xs: 180 },
+          height: 180,
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -119,7 +119,7 @@ export default function MediaControlCard({
         <CardMedia
           component="img"
           sx={{ height: 180, width:130, display: { 
-            // xs: "none",
+            xs: "none",
             md: "block" }}}
           image={song.image.src}
           alt={song.image.alt}

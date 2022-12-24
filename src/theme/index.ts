@@ -88,7 +88,7 @@ export const campingTheme = createTheme({
     primary: { main: "#618c56" }, //icon color
     secondary: { main: "#3c403b" },
     background: { default: "#faf1e4", paper: "#faf1e4" },
-    text: { primary: "#3c403b", secondary: "#c2b8aa" },
+    text: { primary: "#000000", secondary: "#c2b8aa" },
   },
   typography: darkDefaultTypographyPalette,
   transitions: defaultTransitionSettings,

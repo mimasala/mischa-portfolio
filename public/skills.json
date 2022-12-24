@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Linux",
+        "icon": "linux"
+    },
+    {
+        "title": "Java",
+        "icon": "java"
+    },
+    {
+        "title": "Python",
+        "icon": "python"
+    },
+    {
+        "title": "TypeScript",
+        "icon": "typescript"
+    },
+    {
+        "title": "JavaScript",
+        "icon": "javascript"
+    },
+    {
+        "title": "React",
+        "icon": "react"
+    },
+    {
+        "title": "Git",
+        "icon": "git"
+    },
+    {
+        "title": "MySQL",
+        "icon": "mysql"
+    },
+    {
+        "title": "Neo4j",
+        "icon": "neo4j"
+    }
+]

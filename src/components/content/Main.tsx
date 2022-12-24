@@ -1,6 +1,7 @@
-import { Box, Container, Grid, Link, Stack, Toolbar, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Link, Stack, Toolbar, Typography } from "@mui/material";
 import SongsList from "../music/SongsList";
 import songs from "../music/songObjects";
+import SkillCard from "../SkillCard";
 
 const Main = () => {
   return (
@@ -14,8 +15,8 @@ const Main = () => {
             marginBottom: "1em",
           }}
         >
-          <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center", flex:""}}>
-            <Box margin={3}>
+          <Box sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
+            <Box margin={3} sx={{marginRight:"5em"}}>
               <Stack>
                 <Typography variant="h2">{"Mischa Strauss"}</Typography>
                 <Typography variant="subtitle1">{"Software Developer / Student"}</Typography>
@@ -26,13 +27,14 @@ const Main = () => {
             </Box>
           </Box>
         </Box>
+        <Divider sx={{marginBottom:"2em"}}/>
         <Stack>
           <Typography variant="h4">
             <div id="about-me"/>
             {"About Me"}
           </Typography>
           <Typography variant="body1">
-            {"Hello! I am a application developer apprentice at "}
+            {"Hello! I am an application developer apprentice at "}
             <Link href="https://www.six-group.com/de/home.html">SIX</Link>
             {". A financial services company that operates the Swiss stock exchange and provides trading, settlement, clearing, and financial information services. I am currently in my second year of apprenticeship and attending the technical vocational school Vocational School "}
             <Link href="https://tbz.ch/">TBZ</Link>
@@ -40,11 +42,16 @@ const Main = () => {
           </Typography>
         </Stack>
         <Stack sx={{marginTop:"2em"}}>
-          <Typography variant="h4">
+          <Typography variant="h4" marginBottom={"0.2em"}>
             <div id="my-skills"/>
             {"My Skills"}
           </Typography>
         </Stack>
+        <Grid container spacing={4} columns={12} width={"80%"}>
+            <Grid item>
+              <SkillCard title="Docker" icon="../images/songs/lampBARABARABA.webp"/>
+            </Grid>
+          </Grid>
       </Stack>
     </>
   );
