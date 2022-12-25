@@ -26,7 +26,7 @@ const MainContentContainer = ({ children }: props) => {
         overflow: "hidden",
       }}
     >
-      <Box sx={{ flexGrow: "1" }}>
+      <Box sx={{ flexGrow: "1", display:{xs:"none", sm:"flex"}}}>
         <BunnyModel onLoad={setIsLoaded} />
         {!isLoaded && (
           <Box
@@ -42,7 +42,6 @@ const MainContentContainer = ({ children }: props) => {
           </Box>
         )}
       </Box>
-
       <Box
         sx={{
           display: { xs: "flex", sm: "flex" },

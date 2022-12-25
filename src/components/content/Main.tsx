@@ -49,7 +49,7 @@ const Main = () => {
         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flex:"1", flexWrap:"wrap" }}>
           {skills.map((skill, index) => {
             return (
-              <Box key={index} margin={"1em"} 
+              <Box key={index} margin={{xs:"0.5em", sm:"1em", md:"1.5em", lg:"2em", xl:"2.5em"}} 
               // sx={{flex:"1 1 180px"}}
               >
                 <SkillCard icon={skill.icon} title={skill.title} />
