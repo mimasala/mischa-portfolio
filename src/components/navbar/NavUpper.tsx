@@ -7,6 +7,7 @@ import {
   Toolbar,
   IconButton,
   Divider,
+  alpha,
 } from "@mui/material";
 import ViewOnGithubButton from "../ViewOnGithubButton";
 import SettingsButton from "../settingsBar/SettingsButton";
@@ -29,7 +30,9 @@ const NavUpper = ({
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
           background: "transparent",
+          backgroundColor: { xs: alpha("#1f1f1f", 0.5), sm: "transparent" },
           boxShadow: "none",
+          backdropFilter: {xs: "blur(3px)", sm:"none", md:"none", lg:"none", xl:"none"},
           flexGrow: 1,
         }}
       >

@@ -9,7 +9,6 @@ type props = {
 
 export default function SkillCard({ title, icon }: props) {
   return (
-    <Link href={"https://www.youtube.com/"} passHref>
       <Card
         sx={{
           borderRadius: "0.5em",
@@ -38,6 +37,5 @@ export default function SkillCard({ title, icon }: props) {
             </Box>
         </Stack>
       </Card>
-    </Link>
   );
 }
