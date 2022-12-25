@@ -4,7 +4,7 @@ import {
   alpha,
   CircularProgress,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import BunnyModel from "./BunnyModel";
 import Main from "./content/Main";
@@ -15,6 +15,13 @@ interface props {
 
 const MainContentContainer = ({ children }: props) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isPhone, setIsPhone] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 600) {
+      setIsPhone(true);
+    }
+  }, [])
+  
   return (
     <Container
       maxWidth="lg"
@@ -26,7 +33,7 @@ const MainContentContainer = ({ children }: props) => {
         overflow: "hidden",
       }}
     >
-      <Box sx={{ flexGrow: "1", display:{xs:"none", sm:"flex"}}}>
+      {!isPhone && <Box sx={{ flexGrow: "1", display:{sm:"flex"}}}>
         <BunnyModel onLoad={setIsLoaded} />
         {!isLoaded && (
           <Box
@@ -41,7 +48,7 @@ const MainContentContainer = ({ children }: props) => {
             <CircularProgress />
           </Box>
         )}
-      </Box>
+      </Box>}
       <Box
         sx={{
           display: { xs: "flex", sm: "flex" },
