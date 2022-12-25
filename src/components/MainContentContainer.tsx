@@ -45,14 +45,13 @@ const MainContentContainer = ({ children }: props) => {
 
       <Box
         sx={{
-          display: "flex",
-          backdropFilter: "blur(5px)",
-          backgroundColor: alpha("#1f1f1f", 0.5),
+          display: { xs: "flex", sm: "flex" },
+          backgroundColor: { xs: "transparent", sm: alpha("#1f1f1f", 0.5) },
           // minHeight: "100vh",
           borderRadius: "1em",
           overflow: "hidden",
           position: "relative",
-          boxShadow: "0px 0px 10px rgba(0,0,0,0.5)",
+          boxShadow: {xs: "none", sm: "0px 0px 10px rgba(0,0,0,0.5)"},
           flexGrow: "1",
           width: "100%",
         }}
