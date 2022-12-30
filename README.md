@@ -12,3 +12,13 @@ My portfolio website:
 ## <-- THIS IS A WORK IN PROGRESS --!>
 
 Production: [mischa-portfolio.vercel.app/](mischa-portfolio.vercel.app/)
+
+---
+
+### TODO:
+
+- [ ] socials
+- [ ] projects
+- [x] about
+- [x] skills
+- [ ] contact
