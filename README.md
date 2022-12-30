@@ -9,8 +9,6 @@ My portfolio website:
 - [Spline](https://spline.design/)
 - [Vercel](https://vercel.com/)
 
-
 ## <-- THIS IS A WORK IN PROGRESS --!>
 
 Production: [mischa-portfolio.vercel.app/](mischa-portfolio.vercel.app/)
-
