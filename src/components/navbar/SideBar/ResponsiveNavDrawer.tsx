@@ -7,7 +7,6 @@ interface props {
 }
 
 const ResponsiveNavDrawer = ({ mobileOpen, handleDrawerToggle }: props) => {
-  const theme = useTheme();
 
   return (
     <Box

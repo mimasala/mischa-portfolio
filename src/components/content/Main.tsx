@@ -1,4 +1,4 @@
-import { Box, Divider, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, Link, Stack, Typography } from "@mui/material";
 import SongsList from "../music/SongsList";
 import songs from "../music/songObjects";
 import SkillCard from "../SkillCard";
@@ -41,6 +41,7 @@ const Main = () => {
             <Link href="https://tbz.ch/">TBZ</Link>
             {" in Zurich. I am eager to share my skills and experiences through my developer portfolio."}
           </Typography>
+          <Divider></Divider>
         </Stack>
         <Typography marginTop={"2em"} variant="h4">
           <div id="my-skills" />
